@@ -1,0 +1,46 @@
+.some-component {
+  position: relative;
+  background-color: #92B901;
+  height: 50px;
+  width: 300px;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animated_div 5s 1;
+  -moz-animation: animated_div 5s 1;
+  -webkit-animation: animated_div 5s 1;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes animated_div {
+  0% {
+    transform: rotate(0deg);
+    left: 0;
+  }
+  25% {
+    transform: rotate(20deg);
+    left: 0;
+  }
+  50% {
+    transform: rotate(0deg);
+    left: 300px;
+  }
+  55% {
+    transform: rotate(0deg);
+    left: 300px;
+  }
+  70% {
+    transform: rotate(0deg);
+    left: 300px;
+    background: #1ec7e6;
+  }
+  100% {
+    transform: rotate(-360deg);
+    left: 0;
+  }
+}
+

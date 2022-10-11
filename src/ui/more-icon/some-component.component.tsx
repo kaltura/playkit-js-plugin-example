@@ -18,10 +18,6 @@ type SomeComponentProps = {
 @withEventManager
 @withText({ greetingTxt: 'plugin-example.greeting' })
 export class SomeComponent extends Component<SomeComponentProps, MoreIconState> {
-  constructor() {
-    super();
-  }
-
   render(): ComponentChild {
     return (
       <div className={styles.someComponent}>

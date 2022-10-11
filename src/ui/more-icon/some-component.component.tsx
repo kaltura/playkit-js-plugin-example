@@ -1,10 +1,9 @@
-import { h, Component, ComponentChild, createRef, RefObject } from "preact";
-import { PlaykitUI, ui } from "kaltura-player-js";
-import * as styles from "./some-component.component.scss";
+import { h, Component, ComponentChild } from 'preact';
+import { PlaykitUI, ui } from 'kaltura-player-js';
+import * as styles from './some-component.component.scss';
 
 import EventManager = PlaykitUI.EventManager;
 
-const { Icon, Tooltip } = ui.Components;
 const { withEventManager } = ui.Event;
 const { withText } = ui.preacti18n;
 type MoreIconState = {
@@ -12,20 +11,24 @@ type MoreIconState = {
 };
 type SomeComponentProps = {
   developerName: string;
-  moreIconTxt?: string;
+  greetingTxt?: string;
   eventManager?: EventManager;
 };
 
 @withEventManager
-@withText({ moreIconTxt: "controls.moreIcon" })
+@withText({ greetingTxt: 'plugin-example.greeting' })
 export class SomeComponent extends Component<SomeComponentProps, MoreIconState> {
   constructor() {
     super();
   }
 
   render(): ComponentChild {
-    return <div className={styles.someComponent}>
-      <span>{this.props.moreIconTxt} {this.props.developerName} !!!</span>
-    </div>;
+    return (
+      <div className={styles.someComponent}>
+        <span>
+          {this.props.greetingTxt} {this.props.developerName} !!!
+        </span>
+      </div>
+    );
   }
 }

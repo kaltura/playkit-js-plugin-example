@@ -1,7 +1,7 @@
 {
   "en": {
-    "controls": {
-      "moreIcon": "More"
+    "plugin-example": {
+      "greeting": "Welcome"
     }
   }
 }

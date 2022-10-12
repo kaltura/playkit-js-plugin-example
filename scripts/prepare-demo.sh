@@ -1,7 +1,7 @@
 #!/bin/bash
 
 filename="index.html"
-local_url="<script src=\".\/playkit-plugin-example.js\"><\/script>"
+local_url="<script src=\"..\/playkit-plugin-example.js\"><\/script>"
 prod_url="<script src=\"https:\/\/raw.githack.com\/kaltura\/playkit-js-plugin-example\/master\/dist\/playkit-plugin-example.js\"><\/script>"
 
 search="$local_url"

@@ -1,5 +1,5 @@
 import { h, Component, ComponentChild } from 'preact';
-import { PlaykitUI, ui } from 'kaltura-player-js';
+import { PlaykitUI, ui } from '@playkit-js/kaltura-player-js';
 import * as styles from './some-component.component.scss';
 
 import EventManager = PlaykitUI.EventManager;

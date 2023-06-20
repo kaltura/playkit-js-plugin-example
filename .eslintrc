@@ -74,5 +74,8 @@
     "jest": {
       "version": 26
     }
+  },
+  "env": {
+    "browser": true
   }
 }

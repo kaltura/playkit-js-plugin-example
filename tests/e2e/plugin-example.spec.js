@@ -35,10 +35,10 @@ describe('Upper Bar Manager', () => {
       }
     });
     const pluginInstance = player.plugins.pluginExample;
-    player.setMedia({ sources: { ...mediaData } });
-    await player.ready();
 
     // Do
+    player.setMedia({ sources: { ...mediaData } });
+    await player.ready();
 
     // Expect
     expect(pluginInstance.config.developerName).equal('Stiven Hoking');

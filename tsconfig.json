@@ -1,25 +1,35 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "rootDir": ".",
-    "outDir": "build",
-    "preserveSymlinks": true,
-    "jsx": "react",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.(css|scss)$"
+        }
+      }
+    ],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "strict": false,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "jsx": "preserve",
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["es2018"],
-    "module": "commonjs",
-    "noEmitOnError": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "pretty": true,
-    "strict": true,
-    "experimentalDecorators": true,
-    "downlevelIteration": true
+    "paths": {
+      "react": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"],
+    },
+    "lib": ["dom", "ESNext"],
+    "outDir": "./lib/",
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*.ts", "test/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*"]
 }

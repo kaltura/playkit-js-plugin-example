@@ -11,11 +11,34 @@ module.exports = (env, { mode }) => {
     module: {
       rules: [
         {
-          test: /\.tsx?$/,
-          loader: 'ts-loader',
-          options: { configFile: mode === 'development' ? 'tsconfig.dev.json' : 'tsconfig.json' },
-          exclude: /node_modules/
+          test: /\.(tsx?|js)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                [
+                  '@babel/preset-env',
+                  {
+                    bugfixes: true
+                  }
+                ],
+                ['@babel/preset-typescript', {jsxPragma: 'h', jsxPragmaFrag: 'Fragment'}]
+              ],
+              plugins: [
+                // ['@babel/plugin-transform-runtime'],
+                ['@babel/plugin-proposal-decorators', {legacy: true}],
+                ['@babel/plugin-transform-react-jsx', {pragma: 'h', pragmaFrag: 'Fragment'}]
+              ]
+            }
+          }
         },
+        // {
+        //   test: /\.tsx?$/,
+        //   loader: 'ts-loader',
+        //   options: { configFile: mode === 'development' ? 'tsconfig.dev.json' : 'tsconfig.json' },
+        //   exclude: /node_modules/
+        // },
         {
           test: /\.scss/,
           use: [

@@ -6,15 +6,16 @@ import { SomeComponent } from './ui/more-icon/some-component.component';
 export const pluginName = 'pluginExample';
 
 export class PluginExample extends BasePlugin<PluginExampleConfig> {
-  protected static defaultConfig: PluginExampleConfig = {
+  protected static defaultConfig = {
     developerName: 'whoever you are'
   };
 
-  public static isValid(): boolean {
+  protected static isValid(): boolean {
     return true;
   }
 
   protected loadMedia(): void {
+    // this.config.
     this.addSomeComponent();
   }
 

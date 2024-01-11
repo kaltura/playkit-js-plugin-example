@@ -1,8 +1,13 @@
 import { h, Component, ComponentChild } from 'preact';
-import { PlaykitUI, ui } from '@playkit-js/kaltura-player-js';
+import { ui } from '@playkit-js/kaltura-player-js';
+import { EventManager } from '@playkit-js/playkit-js';
 import * as styles from './some-component.component.scss';
 
-import EventManager = PlaykitUI.EventManager;
+// import { h, Component, ComponentChild } from 'preact';
+// // import { ui } from '@playkit-js/kaltura-player-js';
+// import { EventManager } from '@playkit-js/playkit-js';
+// import { Event, preacti18n } from '@playkit-js/playkit-js-ui';
+// import * as styles from './some-component.component.scss';
 
 const { withEventManager } = ui.Event;
 const { withText } = ui.preacti18n;

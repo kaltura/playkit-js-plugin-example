@@ -14,8 +14,7 @@ export class PluginExample extends BasePlugin<PluginExampleConfig> {
     return true;
   }
 
-  protected loadMedia(): void {
-    // this.config.
+  public loadMedia(): void {
     this.addSomeComponent();
   }
 

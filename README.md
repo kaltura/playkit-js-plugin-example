@@ -1,4 +1,4 @@
-[![Build Status](https://app.travis-ci.com/kaltura/playkit-js-plugin-example.svg?branch=master)](https://app.travis-ci.com/kaltura/playkit-js-plugin-example)
+[![Build Status](https://github.com/kaltura/playkit-js-plugin-example/actions/workflows/run_canary_full_flow.yaml/badge.svg)](https://github.com/kaltura/playkit-js-plugin-example/actions/workflows/run_canary_full_flow.yaml)
 [![](https://img.shields.io/npm/v/@playkit-js/plugin-example/latest.svg)](https://www.npmjs.com/package/@playkit-js/plugin-example)
 [![](https://img.shields.io/npm/v/@playkit-js/plugin-example/canary.svg)](https://www.npmjs.com/package/@playkit-js/plugin-example/v/canary)
 

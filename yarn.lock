@@ -1521,6 +1521,13 @@
   dependencies:
     postcss "^8.0.0"
 
+"@types/preact-i18n@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@types/preact-i18n/-/preact-i18n-1.2.0.tgz#dae377ef7e44be040abd34036ef425d5d71e2088"
+  integrity sha512-v+u51kEh9BnmB+BS7wZlTuuUOjcCWve+/yGO6+yI0zxZP/27uidJ+l1Z6OwF1FTW02K7x6SJzvxhdqElIi1psg==
+  dependencies:
+    preact "^8.4.2"
+
 "@types/prop-types@*":
   version "15.7.11"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.11.tgz#2596fb352ee96a1379c657734d4b913a613ad563"
@@ -5310,6 +5317,11 @@ preact@^10.3.4:
   version "10.19.3"
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.19.3.tgz#7a7107ed2598a60676c943709ea3efb8aaafa899"
   integrity sha512-nHHTeFVBTHRGxJXKkKu5hT8C/YWBkPso4/Gad6xuj5dbptt9iF9NZr9pHbPhBrnT2klheu7mHTxTZ/LjwJiEiQ==
+
+preact@^8.4.2:
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-8.5.3.tgz#78c2a5562fcecb1fed1d0055fa4ac1e27bde17c1"
+  integrity sha512-O3kKP+1YdgqHOFsZF2a9JVdtqD+RPzCQc3rP+Ualf7V6rmRDchZ9MJbiGTT7LuyqFKZqlHSOyO/oMFmI2lVTsw==
 
 prelude-ls@^1.2.1:
   version "1.2.1"

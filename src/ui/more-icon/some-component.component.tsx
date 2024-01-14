@@ -1,19 +1,11 @@
-import { h, Component, ComponentChild } from 'preact';
-import { ui } from '@playkit-js/kaltura-player-js';
-import { EventManager } from '@playkit-js/playkit-js';
+import { h, Component, VNode } from 'preact';
 import * as styles from './some-component.component.scss';
+import { withText } from 'preact-i18n';
+import { EventManager } from "@playkit-js/playkit-js";
+import { Event } from "@playkit-js/playkit-js-ui";
 
-// import { h, Component, ComponentChild } from 'preact';
-// // import { ui } from '@playkit-js/kaltura-player-js';
-// import { EventManager } from '@playkit-js/playkit-js';
-// import { Event, preacti18n } from '@playkit-js/playkit-js-ui';
-// import * as styles from './some-component.component.scss';
+const { withEventManager } = Event;
 
-const { withEventManager } = ui.Event;
-const { withText } = ui.preacti18n;
-type MoreIconState = {
-  toggle: boolean;
-};
 type SomeComponentProps = {
   developerName: string;
   greetingTxt?: string;
@@ -22,8 +14,8 @@ type SomeComponentProps = {
 
 @withEventManager
 @withText({ greetingTxt: 'plugin-example.greeting' })
-export class SomeComponent extends Component<SomeComponentProps, MoreIconState> {
-  render(): ComponentChild {
+export class SomeComponent extends Component<SomeComponentProps, any> {
+  render(): VNode<SomeComponentProps> {
     return (
       <div className={styles.someComponent}>
         <span>

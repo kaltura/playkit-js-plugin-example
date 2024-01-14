@@ -23,12 +23,12 @@ module.exports = (env, { mode }) => {
                     bugfixes: true
                   }
                 ],
-                ['@babel/preset-typescript', {jsxPragma: 'h', jsxPragmaFrag: 'Fragment'}]
+                ['@babel/preset-typescript', { jsxPragma: 'h', jsxPragmaFrag: 'Fragment' }]
               ],
               plugins: [
                 // ['@babel/plugin-transform-runtime'],
-                ['@babel/plugin-proposal-decorators', {legacy: true}],
-                ['@babel/plugin-transform-react-jsx', {pragma: 'h', pragmaFrag: 'Fragment'}]
+                ['@babel/plugin-proposal-decorators', { legacy: true }],
+                ['@babel/plugin-transform-react-jsx', { pragma: 'h', pragmaFrag: 'Fragment' }]
               ]
             }
           }

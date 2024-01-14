@@ -1,0 +1,74 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": ["preact", "plugin:prettier/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "plugins": ["prettier", "@typescript-eslint"],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 150,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "eol-last": "off",
+    "prettier/prettier": "error",
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    //    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
+      {
+        "accessibility": "explicit",
+        "overrides": {
+          "accessors": "explicit",
+          "constructors": "no-public",
+          "methods": "explicit",
+          "properties": "explicit",
+          "parameterProperties": "explicit"
+        }
+      }
+    ],
+    "block-scoped-var": "error",
+    "arrow-parens": "error",
+    "eqeqeq": "error",
+    "no-var": "error",
+    "no-console": "error",
+    "prefer-const": "error"
+  },
+  "overrides": [
+    //    {
+    //      "files": ["**/ui/**/*"],
+    //      "rules": {
+    //        "@typescript-eslint/explicit-member-accessibility":[
+    //          "error",
+    //          {
+    //            "accessibility": "explicit",
+    //            "overrides": {
+    //              "accessors": "explicit",
+    //              "constructors": "no-public",
+    //              "methods": "no-public",
+    //              "properties": "explicit",
+    //              "parameterProperties": "explicit"
+    //            }
+    //          }
+    //        ]
+    //      }
+    //    }
+  ],
+  "settings": {
+    "jest": {
+      "version": 26
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  }
+}

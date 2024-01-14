@@ -25,7 +25,7 @@
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "react": ["./node_modules/preact/compat/"],
-      "react-dom": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"]
     },
     "lib": ["dom", "ESNext"],
     "outDir": "./lib/",

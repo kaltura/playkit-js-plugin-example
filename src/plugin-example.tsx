@@ -1,5 +1,5 @@
 import { BasePlugin, ui } from '@playkit-js/kaltura-player-js';
-import { PluginExampleConfig } from './types/plugin-example-config';
+import { PluginExampleConfig } from "./types";
 import { h } from 'preact';
 import { SomeComponent } from './ui/more-icon/some-component.component';
 

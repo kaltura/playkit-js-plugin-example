@@ -47,7 +47,7 @@ module.exports = (env, { mode }) => {
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: mode === 'development'
+                // sourceMap: mode === 'development'
               }
             }
           ]

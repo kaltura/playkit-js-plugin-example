@@ -1,3 +1,3 @@
-export type PluginExampleConfig = {
+export interface PluginExampleConfig {
   developerName: string;
 };

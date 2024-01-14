@@ -4,9 +4,6 @@ module.exports = (env, { mode }) => {
   return {
     target: 'web',
     entry: './src/index.ts',
-    optimization: {
-      minimize: mode !== 'development'
-    },
     devtool: 'source-map',
     module: {
       rules: [
@@ -26,19 +23,13 @@ module.exports = (env, { mode }) => {
                 ['@babel/preset-typescript', { jsxPragma: 'h', jsxPragmaFrag: 'Fragment' }]
               ],
               plugins: [
-                // ['@babel/plugin-transform-runtime'],
+                ['@babel/plugin-transform-runtime'],
                 ['@babel/plugin-proposal-decorators', { legacy: true }],
                 ['@babel/plugin-transform-react-jsx', { pragma: 'h', pragmaFrag: 'Fragment' }]
               ]
             }
           }
         },
-        // {
-        //   test: /\.tsx?$/,
-        //   loader: 'ts-loader',
-        //   options: { configFile: mode === 'development' ? 'tsconfig.dev.json' : 'tsconfig.json' },
-        //   exclude: /node_modules/
-        // },
         {
           test: /\.scss/,
           use: [

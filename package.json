@@ -22,8 +22,7 @@
   ],
   "scripts": {
     "serve": "webpack serve --open --mode development",
-    "watch": "webpack --watch --mode development",
-    "build:dev": "webpack --mode development",
+    "build:dev": "webpack --mode development --watch",
     "build:prod": "webpack --mode production",
     "build": "yarn run build:prod && yarn run build:types",
     "build:types": "tsc --build tsconfig-lib.json && mkdir -p lib && api-extractor run --local",

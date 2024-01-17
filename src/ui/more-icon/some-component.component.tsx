@@ -7,7 +7,7 @@ import { Event } from "@playkit-js/playkit-js-ui";
 const { withEventManager } = Event;
 
 type SomeComponentProps = {
-  developerName: string;
+  someTitle: string;
   greetingTxt?: string;
   eventManager?: EventManager;
 };
@@ -19,7 +19,7 @@ export class SomeComponent extends Component<SomeComponentProps, any> {
     return (
       <div className={styles.someComponent}>
         <span>
-          {this.props.greetingTxt} {this.props.developerName} !!!
+          {this.props.greetingTxt} {this.props.someTitle}
         </span>
       </div>
     );

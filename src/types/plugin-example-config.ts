@@ -1,3 +1,3 @@
 export interface PluginExampleConfig {
-  developerName: string;
+  someTitle: string;
 };

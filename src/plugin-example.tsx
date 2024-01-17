@@ -6,11 +6,11 @@ import { PluginExampleConfig } from "./types";
 export const pluginName = 'pluginExample';
 
 export class PluginExample extends BasePlugin<PluginExampleConfig> {
-  protected static defaultConfig = {
-    developerName: 'whoever you are'
+  public static defaultConfig = {
+    someTitle: 'Plugin Example...'
   };
 
-  protected static isValid(): boolean {
+  public static isValid(): boolean {
     return true;
   }
 
@@ -23,7 +23,7 @@ export class PluginExample extends BasePlugin<PluginExampleConfig> {
       label: 'plugin-example',
       area: ui.ReservedPresetAreas.InteractiveArea,
       presets: [ui.ReservedPresetNames.Playback, ui.ReservedPresetNames.Live],
-      get: () => <SomeComponent developerName={this.config.developerName} />
+      get: () => <SomeComponent someTitle={this.config.someTitle} />
     });
   }
 }

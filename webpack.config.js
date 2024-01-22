@@ -1,4 +1,6 @@
+const webpack = require('webpack');
 const path = require('path');
+const packageData = require('./package.json');
 
 module.exports = (env, { mode }) => {
   return {
@@ -60,6 +62,11 @@ module.exports = (env, { mode }) => {
     output: {
       filename: 'playkit-plugin-example.js',
       path: path.resolve(__dirname, 'dist'),
+      library: {
+        umdNamedDefine: true,
+        name: ['KalturaPlayer', 'plugins', 'plugin-example'],
+        type: 'umd'
+      },
       clean: true
     },
     externals: {
@@ -76,6 +83,12 @@ module.exports = (env, { mode }) => {
       client: {
         progress: true
       }
-    }
+    },
+    plugins: [
+      new webpack.DefinePlugin({
+        __VERSION__: JSON.stringify(packageData.version),
+        __NAME__: JSON.stringify(packageData.name)
+      })
+    ]
   };
 };

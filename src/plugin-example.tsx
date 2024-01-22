@@ -1,12 +1,12 @@
 import { h } from 'preact';
 import { BasePlugin, ui } from '@playkit-js/kaltura-player-js';
-import { SomeComponent } from './ui/more-icon/some-component.component';
-import { PluginExampleConfig } from "./types";
+import { SomeWrappedComponent } from './ui/more-icon/some-component.component';
+import { PluginExampleConfig } from './types';
 
 export const pluginName = 'pluginExample';
 
-export class PluginExample extends BasePlugin<PluginExampleConfig> {
-  public static defaultConfig = {
+export class PluginExample extends BasePlugin {
+  public static defaultConfig: PluginExampleConfig = {
     someTitle: 'Plugin Example...'
   };
 
@@ -23,7 +23,7 @@ export class PluginExample extends BasePlugin<PluginExampleConfig> {
       label: 'plugin-example',
       area: ui.ReservedPresetAreas.InteractiveArea,
       presets: [ui.ReservedPresetNames.Playback, ui.ReservedPresetNames.Live],
-      get: () => <SomeComponent someTitle={this.config.someTitle} />
+      get: () => <SomeWrappedComponent someTitle={this.config.someTitle} />
     });
   }
 }

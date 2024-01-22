@@ -27,8 +27,7 @@
     "@typescript-eslint/explicit-function-return-type": "warn",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-unused-vars": "error",
-    //    "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
       {
@@ -52,31 +51,8 @@
     "no-trailing-spaces": "error",
     "quotes": ["warn", "single", { "avoidEscape": true }]
   },
-  "overrides": [
-    //    {
-    //      "files": ["**/ui/**/*"],
-    //      "rules": {
-    //        "@typescript-eslint/explicit-member-accessibility":[
-    //          "error",
-    //          {
-    //            "accessibility": "explicit",
-    //            "overrides": {
-    //              "accessors": "explicit",
-    //              "constructors": "no-public",
-    //              "methods": "no-public",
-    //              "properties": "explicit",
-    //              "parameterProperties": "explicit"
-    //            }
-    //          }
-    //        ]
-    //      }
-    //    }
-  ],
-  "settings": {
-    "jest": {
-      "version": 26
-    }
-  },
+  "overrides": [],
+  "settings": {},
   "env": {
     "browser": true,
     "es6": true

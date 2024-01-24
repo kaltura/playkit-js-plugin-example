@@ -3,5 +3,6 @@ types/
 demo/
 webpack.config.js
 tsconfig.json
+tsconfig-lib.json
 node_modules
 .eslintrc.json

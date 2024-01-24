@@ -50,7 +50,7 @@
     "@babel/runtime": "^7.23.8",
     "@microsoft/api-extractor": "^7.39.1",
     "@playkit-js/browserslist-config": "canary",
-    "@playkit-js/kaltura-player-js": "^3.17.8",
+    "@playkit-js/kaltura-player-js": "^3.17.9-canary.0-0c8731f",
     "@types/chai": "^4.3.3",
     "@types/mocha": "^9.1.1",
     "@types/preact-i18n": "1.2.0",
@@ -84,9 +84,9 @@
     "webpack-dev-server": "^4.15.1"
   },
   "peerDependencies": {
-    "@playkit-js/kaltura-player-js": "^3.17.8",
-    "@playkit-js/playkit-js": "^0.84.4",
-    "@playkit-js/playkit-js-ui": "^0.77.15",
+    "@playkit-js/kaltura-player-js": "^3.17.9-canary.0-0c8731f",
+    "@playkit-js/playkit-js": "^0.84.5-canary.0-df6fd72",
+    "@playkit-js/playkit-js-ui": "0.78.0-canary.0-b615ac6",
     "preact": "10.4.6",
     "preact-i18n": "2.0.0-preactx.2"
   },

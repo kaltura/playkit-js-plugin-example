@@ -1,20 +1,20 @@
-import { BasePlugin, ui } from '@playkit-js/kaltura-player-js';
-import { PluginExampleConfig } from './types/plugin-example-config';
 import { h } from 'preact';
-import { SomeComponent } from './ui/more-icon/some-component.component';
+import { BasePlugin, ui } from '@playkit-js/kaltura-player-js';
+import { SomeWrappedComponent } from './ui/more-icon/some-component.component';
+import { PluginExampleConfig } from './types';
 
 export const pluginName = 'pluginExample';
 
-export class PluginExample extends BasePlugin<PluginExampleConfig> {
-  protected static defaultConfig: PluginExampleConfig = {
-    developerName: 'whoever you are'
+export class PluginExample extends BasePlugin {
+  public static defaultConfig: PluginExampleConfig = {
+    someTitle: 'Plugin Example...'
   };
 
   public static isValid(): boolean {
     return true;
   }
 
-  protected loadMedia(): void {
+  public loadMedia(): void {
     this.addSomeComponent();
   }
 
@@ -23,7 +23,7 @@ export class PluginExample extends BasePlugin<PluginExampleConfig> {
       label: 'plugin-example',
       area: ui.ReservedPresetAreas.InteractiveArea,
       presets: [ui.ReservedPresetNames.Playback, ui.ReservedPresetNames.Live],
-      get: () => <SomeComponent developerName={this.config.developerName} />
+      get: () => <SomeWrappedComponent someTitle={this.config.someTitle} />
     });
   }
 }

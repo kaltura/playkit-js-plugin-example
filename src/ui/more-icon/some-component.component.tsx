@@ -1,30 +1,24 @@
-import { h, Component, ComponentChild } from 'preact';
-import { PlaykitUI, ui } from '@playkit-js/kaltura-player-js';
+import { h, Component, VNode } from 'preact';
 import * as styles from './some-component.component.scss';
+import { withText } from 'preact-i18n';
+import { EventManager } from '@playkit-js/playkit-js';
 
-import EventManager = PlaykitUI.EventManager;
-
-const { withEventManager } = ui.Event;
-const { withText } = ui.preacti18n;
-type MoreIconState = {
-  toggle: boolean;
-};
 type SomeComponentProps = {
-  developerName: string;
+  someTitle: string;
   greetingTxt?: string;
   eventManager?: EventManager;
 };
 
-@withEventManager
-@withText({ greetingTxt: 'plugin-example.greeting' })
-export class SomeComponent extends Component<SomeComponentProps, MoreIconState> {
-  render(): ComponentChild {
-    return (
-      <div className={styles.someComponent}>
-        <span>
-          {this.props.greetingTxt} {this.props.developerName} !!!
-        </span>
-      </div>
-    );
-  }
+function SomeComponent({greetingTxt, someTitle}: SomeComponentProps) {
+  return (
+    <div className={styles.someComponent}>
+      <span>
+        {greetingTxt} {someTitle}
+      </span>
+    </div>
+  );
 }
+
+const SomeWrappedComponent = withText({ greetingTxt: 'plugin-example.greeting' })(SomeComponent);
+
+export { SomeWrappedComponent };

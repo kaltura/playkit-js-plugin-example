@@ -1,6 +1,6 @@
 .some-component {
   position: relative;
-  background-color: #92B901;
+  background-color: #92b901;
   height: 50px;
   width: 300px;
   color: whitesmoke;
@@ -14,7 +14,6 @@
   -webkit-animation: animated_div 5s 1;
   animation-iteration-count: infinite;
 }
-
 
 @keyframes animated_div {
   0% {
@@ -43,4 +42,3 @@
     left: 0;
   }
 }
-

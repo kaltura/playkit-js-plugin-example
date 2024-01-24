@@ -1,3 +1,12 @@
-.eslintrc
-types
-dist
+dist/
+lib/
+docs/
+api-extractor/
+.github/
+coverage/
+CHANGELOG.md
+yarn.lock
+yarn-error.log
+LICENSE
+README.md
+.eslintrc.json

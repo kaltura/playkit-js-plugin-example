@@ -26,4 +26,8 @@ export class PluginExample extends BasePlugin {
       get: () => <SomeWrappedComponent someTitle={this.config.someTitle} />
     });
   }
+
+  public destroy(): void {
+    this.logger.info('cleanup logic should be executed here...');
+  }
 }

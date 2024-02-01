@@ -10,5 +10,9 @@
     "mocha/no-exclusive-tests": "error",
     "mocha/no-mocha-arrows": "off",
     "max-len": ["warn", { "code": 200 }]
+  },
+  "globals": {
+    "expect": "readonly",
+    "sinon": "readonly"
   }
 }

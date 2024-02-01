@@ -4,7 +4,8 @@
       {
         "name": "typescript-plugin-css-modules",
         "options": {
-          "customMatcher": "\\.(css|scss)$"
+          "customMatcher": "\\.(css|scss)$",
+          "classnameTransform":"camelCase"
         }
       }
     ],
@@ -13,7 +14,7 @@
     "moduleResolution": "Node",
     "baseUrl": ".",
     "sourceMap": true,
-    "strict": false,
+    "strict": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "resolveJsonModule": true,

@@ -41,7 +41,7 @@ module.exports = (env, { mode }) => {
               options: {
                 esModule: true,
                 modules: {
-                  localIdentName: '[local]',
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
                   namedExport: true
                 }
               }

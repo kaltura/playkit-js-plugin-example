@@ -6,7 +6,8 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist/**/*",
-    "src/**/*"
+    "src/**/*",
+    "translations/**/*"
   ],
   "license": "AGPL-3.0",
   "homepage": "https://github.com/kaltura/playkit-js-plugin-example",

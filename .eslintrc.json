@@ -31,7 +31,8 @@
       {
         "varsIgnorePattern": "^h$"
       }
-    ],    "@typescript-eslint/no-explicit-any": "warn",
+    ],    
+    "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
       {

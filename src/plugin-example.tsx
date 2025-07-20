@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { BasePlugin, ui } from '@playkit-js/kaltura-player-js';
-import { SomeWrappedComponent } from './ui/more-icon/some-component.component';
+import { SomeWrappedComponent } from './components/more-icon/some-component.component';
 import { PluginExampleConfig } from './types';
 
 export const pluginName = 'pluginExample';
@@ -36,6 +36,7 @@ export class PluginExample extends BasePlugin {
   }
 
   public destroy(): void {
+    super.destroy();
     this.logger.info(`'destroy' lifecycle hook - called when player.destroy() API is called)'
       'cleanup logic should be executed here...'`);
   }

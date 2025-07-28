@@ -24,7 +24,7 @@ export const loadPlayer = (pluginConf: any, playbackConf: Record<string, any> = 
           }
         },
         plugins: {
-          reels: {}
+          pluginExample: {}
         },
         playback: { muted: true, ...playbackConf }
       });

@@ -14,7 +14,11 @@ Files and folders that need to be changed after cloning the repository:
 - /demo
 - /translations
 
-Also, search for all instance of the string "plugin-example" in the project.
+Search for all instance of the string "plugin-example" in the project.
+
+Make sure to update the repository settings - teams, branch protection rules, autolink references and secrets.
+You can copy the definition from any of our other repositories.
+Adding secrets to the repository requires assistance from IT.
 
 ## Features
     

@@ -39,8 +39,8 @@ module.exports = (env, { mode }) => {
             {
               loader: 'style-loader',
               options: {
-                attributes: {id: `${packageData.name}`},
-                injectType: "singletonStyleTag"
+                attributes: { id: `${packageData.name}` },
+                injectType: 'singletonStyleTag'
               }
             },
             {
@@ -71,7 +71,7 @@ module.exports = (env, { mode }) => {
       path: path.resolve(__dirname, 'dist'),
       library: {
         umdNamedDefine: true,
-        name: ['KalturaPlayer', 'plugins', 'plugin-example'],
+        name: ['KalturaPlayer', 'plugins', 'pluginExample'],
         type: 'umd'
       },
       clean: true

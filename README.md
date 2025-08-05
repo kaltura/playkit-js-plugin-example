@@ -19,6 +19,7 @@ Search for all instance of the string "plugin-example" in the project.
 Make sure to update the repository settings - teams, branch protection rules, autolink references and secrets.
 You can copy the definition from any of our other repositories.
 Adding secrets to the repository requires assistance from IT.
+Don't forget to add the repository to [playkit-js-bump-release](https://github.com/kaltura/playkit-js-bump-release/edit/main/player-dependencies.txt).
 
 ## Features
     

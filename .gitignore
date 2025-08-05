@@ -4,3 +4,4 @@ node_modules
 *.log
 .idea
 types/tsdoc-metadata.json
+.DS_Store

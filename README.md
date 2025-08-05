@@ -14,6 +14,9 @@ Files and folders that need to be changed after cloning the repository:
 - /demo
 - /translations
 
+Some other things to note:
+Update this README file and add information about the plugin, note that the build status in the top of the file above needs to be updated to point to the build pipeline of your new plugin.
+
 Search for all instance of the string "plugin-example" in the project.
 
 Make sure to update the repository settings - teams, branch protection rules, autolink references and secrets.

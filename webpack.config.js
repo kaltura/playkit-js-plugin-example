@@ -1,7 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
 const packageData = require('./package.json');
-const CSS_MODULE_PREFIX = 'playkit';
+
+const PLAYER_V7_PREFIX = 'playkit';
+const CSS_MODULE_PREFIX = `${PLAYER_V7_PREFIX}-plugin-example`;
 
 module.exports = (env, { mode }) => {
   return {
@@ -39,8 +41,8 @@ module.exports = (env, { mode }) => {
             {
               loader: 'style-loader',
               options: {
-                attributes: {id: `${packageData.name}`},
-                injectType: "singletonStyleTag"
+                attributes: { id: `${packageData.name}` },
+                injectType: 'singletonStyleTag'
               }
             },
             {
@@ -48,7 +50,7 @@ module.exports = (env, { mode }) => {
               options: {
                 esModule: true,
                 modules: {
-                  localIdentName: `${CSS_MODULE_PREFIX}-plx-[local]`,
+                  localIdentName: `${CSS_MODULE_PREFIX}__[name]__[local]`,
                   namedExport: true
                 }
               }
@@ -71,7 +73,7 @@ module.exports = (env, { mode }) => {
       path: path.resolve(__dirname, 'dist'),
       library: {
         umdNamedDefine: true,
-        name: ['KalturaPlayer', 'plugins', 'plugin-example'],
+        name: ['KalturaPlayer', 'plugins', 'pluginExample'],
         type: 'umd'
       },
       clean: true

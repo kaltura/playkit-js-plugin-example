@@ -1,5 +1,5 @@
 import { h, Component, VNode } from 'preact';
-import * as styles from './some-component.component.scss';
+import * as styles from './some-component.scss';
 import { withText } from 'preact-i18n';
 import { EventManager } from '@playkit-js/playkit-js';
 
@@ -9,9 +9,9 @@ type SomeComponentProps = {
   eventManager?: EventManager;
 };
 
-function SomeComponent({greetingTxt, someTitle}: SomeComponentProps) {
+function _SomeComponent({ greetingTxt, someTitle }: SomeComponentProps) {
   return (
-    <div className={styles.someComponent}>
+    <div data-testid="some-component" className={styles.someComponent}>
       <span>
         {greetingTxt} {someTitle}
       </span>
@@ -19,6 +19,6 @@ function SomeComponent({greetingTxt, someTitle}: SomeComponentProps) {
   );
 }
 
-const SomeWrappedComponent = withText({ greetingTxt: 'plugin-example.greeting' })(SomeComponent);
+const SomeComponent = withText({ greetingTxt: 'plugin-example.greeting' })(_SomeComponent);
 
-export { SomeWrappedComponent };
+export { SomeComponent };
